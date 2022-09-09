@@ -1,0 +1,12 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: naming-server
+eureka:
+  instance:
+    hostname: localhost
+    preferIpAddress: true
+  client:
+    service-url:
+      defaultZone: http://${EUREKA_HOST:localhost}:${EUREKA_PORT:8761}/eureka/
