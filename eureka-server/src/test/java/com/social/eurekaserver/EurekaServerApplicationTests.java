@@ -1,10 +1,10 @@
-package com.social.namingserver;
+package com.social.eurekaserver;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class NamingServerApplicationTests {
+class EurekaServerApplicationTests {
 
     @Test
     void contextLoads() {

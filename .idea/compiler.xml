@@ -7,14 +7,18 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="post-service" />
+        <module name="eureka-server" />
         <module name="fakebook" />
         <module name="gateway" />
-        <module name="naming-server" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="naming-server" target="11" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="eureka-server" options="-parameters" />
       <module name="gateway" options="-parameters" />
       <module name="naming-server" options="-parameters" />
       <module name="post-service" options="-parameters" />
