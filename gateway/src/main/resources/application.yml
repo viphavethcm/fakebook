@@ -11,32 +11,32 @@ management:
 spring:
   application:
     name: gateway
-  cloud:
-    config:
-      enabled: false
-    gateway:
-      globalcors:
-        corsConfigurations:
-          '[/**]':
-            allowedOrigins: "*"
-            allowedMethods:
-              - GET
-              - POST
-      discovery:
-        locator:
-          enabled: true
-          lower-case-service-id: true
-      routes:
+#  cloud:
+#    config:
+#      enabled: false
+#    gateway:
+#      globalcors:
+#        corsConfigurations:
+#          '[/**]':
+#            allowedOrigins: "*"
+#            allowedMethods:
+#              - GET
+#              - POST
+#      discovery:
+#        locator:
+#          enabled: true
+#          lower-case-service-id: true
+#      routes:
 #        - id: oauth-service
 #          uri: http://localhost:8100
 #          predicates:
 #            - Path=/oauth2/**
 #          filters:
 #            - PreOauth2SSOGatewayFilter
-        - id: post-service
-          uri: http://localhost:8000
-          predicates:
-            - Path=/posts/**
+#        - id: post-service
+#          uri: http://localhost:8000
+#          predicates:
+#            - Path=/posts/**
 #          filters:
 #            - PreOauth2SSOGatewayFilter
 #  security:
